@@ -69,7 +69,7 @@ Inoltre, probabilmente vorrai rinominare il certificato e il blocco `{superBlock
 1. Aggiorna il file `index.md` nella cartella qui sopra, cambiando i valori `title` e `superBlock` al nuovo nome.
 1. Per ogni cartella di un blocco all'interno della precedente, aggiorna `index.md` affinché usi il valore corretto di `superBlock`.
 1. Nel file `client/src/resources/cert-and-project-map.ts`, aggiorna il percorso per il certificato in cima al file, e il valore di `title` per quel superblocco. **Nota** che cambiare `title` qui **romperà** l'abilità di vedere la certificazione per questo superblocco. Fa affidamento sul titolo del superblocco per abbinare il titolo del certificato. Vorrai probabilmente rinominare la certificazione allo stesso tempo.
-1. Update the `superBlockCertTypeMap` key in `shared/config/certification-settings.js` to the new superBlock name.
+1. Aggiorna la chiave `superBlockCertTypeMap` key in `shared/config/certification-settings.js`  con il nuovo nome del superblocco.
 1. Aggiorna il valore del percorso in `client/src/assets/icons/index.tsx`.
 1. Per ogni lingua in `client/i18n/locales`, aggiorna il file `intro.json` file affinché usi il nuovo `dashedName` del superblocco. Nel file inglese aggiorna anche `title`.
 1. Check the `shared/config/i18n/all-langs.js` file to see if the superBlock is enabled in i18n builds. Aggiorna il valore dove è usato.
