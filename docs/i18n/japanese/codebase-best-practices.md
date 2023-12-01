@@ -169,12 +169,11 @@ api/
 │   ├── utils.test.ts
 ```
 
-#### Integration Tests
+####統合テスト
 
-Integration tests test the API as a whole. The tests will require mocking, and should not require fixtures beyond the database seeding data, and a method to authenticate.
+統合テストは、API全体をテストします。テストにはモッキングが必要であり、データベースのシードデータと認証用の方法を超えるフィクスチャは必要ありません。
 
-Typically, each integration test file will be directly related to a route. The integration tests are located in the `api/tests/` directory:
-
+通常、各統合テストファイルは特定のルートに直接関連しています。統合テストは api/tests/ ディレクトリにあります：
 ```text
 api/
 ├── tests/
