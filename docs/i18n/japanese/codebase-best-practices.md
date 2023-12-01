@@ -10,15 +10,14 @@ We are strongly opinionated about adding new variables/tokens to the colors. Aft
 
 The `!important` keyword may be used to override values in some cases (e.g. accessibility concerns). You should add a comment describing the issue, so it doesn't get removed in future refactoring.
 
-### RTL support
+RTLサポート
+当社は、この方向で読まれる言語のために、コードベースで右から左（RTL）レイアウトのサポートを目指しています。これを行うには、コンポーネントのスタイリング方法に注意する必要があります。以下は、守るべき簡単なルールのいくつかです：
 
-We are striving to support right-to-left (RTL) layout in the codebase for languages that are read in this direction. For this you need be mindful of how to style components. Here are some quick rules of thumb to follow:
-
-- Don't use `float` properties
-  - Use Flexbox and Grid layouts instead, as they have RTL support already built-in, and those will be easier to maintain and review.
-- Don't define the direction while using `margin` and `padding`: it may seem harmless to use `padding-right` and `margin-left`, but these directions aren't mirrored when the layout changes to RTL, and adding counter values for them in the RTL file makes maintaining the codebase harder.
-  - Use logical properties for them: You can add the same spacing by using `padding-inline-end` and `margin-inline-start`, and you won't need to worry about RTL layout, as they follow where the line starts and ends, and you won't need to add any extra values in the RTL files, so people won't need to remember to change the same values in two files.
-- Don't use `!important` in `font-family`: RTL layout uses different fonts compared to the LTR layout, when you add `!important` in the `font-family` property it affects the RTL layout too.
+float プロパティを使用しない
+代わりにFlexboxやGridレイアウトを使用すると、既にRTLサポートが組み込まれており、メンテナンスやレビューが容易になります。
+margin と padding を使用する際に方向を定義しない：padding-right や margin-left を使用するのは無害に見えるかもしれませんが、レイアウトがRTLに変更されたときにこれらの方向が反映されないため、RTLファイルにそれらの対向値を追加するとコードベースのメンテナンスが難しくなります。
+代わりに論理的なプロパティを使用する：padding-inline-end や margin-inline-start を使用することで同じスペースを追加でき、RTLレイアウトに関して心配する必要がなくなります。これらは行の開始と終了に従いますので、RTLファイルに余分な値を追加する必要もなく、二つのファイルで同じ値を変更する必要があることを覚えておく必要もありません。
+font-family に !important を使用しない：RTLレイアウトはLTRレイアウトと比べて異なるフォントを使用するため、font-family プロパティに !important を追加するとRTLレイアウトにも影響します。
 
 ## General JavaScript
 
