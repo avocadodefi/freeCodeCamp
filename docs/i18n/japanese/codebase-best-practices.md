@@ -31,9 +31,9 @@ It is encouraged to use functional components over class-based components.
 
 #### Git のファイル履歴を保持する
 
-Sometimes changing the file from `<filename>.js` to `<filename>.ts` (or `.tsx`) causes the original file to be deleted, and a new one created, and other times the filename just changes - in terms of Git. Ideally, we want the file history to be preserved.
+ファイルを <filename>.js から <filename>.ts（または .tsx）に変更すると、元のファイルが削除されて新しいファイルが作成されることがありますし、別の場合には単にファイル名が変更されるだけです - Gitの観点から見ると。理想的には、ファイルの履歴を保持したいものです。
 
-The best bet at achieving this is to:
+これを実現するための最良の方法は以下の通りです：
 
 1. ファイル名を変更する
 2. フラグ `--no-verify` でコミットして、Husky がリントエラーについて不平を言うことを防ぐ
