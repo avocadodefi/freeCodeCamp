@@ -1,14 +1,14 @@
 # コードベースのベストプラクティス
 
-## Styling a component
+## コンポーネントのスタイリング
 
-We recommend styling components using our [design style guide](https://design-style-guide.freecodecamp.org/).
+コンポーネントのスタイリングには、私たちの [design style guide](https://design-style-guide.freecodecamp.org/) の使用を推奨します。
 
-The colors are defined in [`variable.css`](/client/src/components/layouts/variables.css), and the fonts are in [`fonts.css`](/client/src/components/layouts/fonts.css).
+色は [`variable.css`](/client/src/components/layouts/variables.css), で定義されており、フォントは [`fonts.css`](/client/src/components/layouts/fonts.css). にあります。
 
-We are strongly opinionated about adding new variables/tokens to the colors. After careful research, the colors have been chosen to respect the freeCodeCamp brand identity, developer experience, and accessibility.
+新しい変数/トークンを色に追加することについては、強く意見を持っています。慎重な研究の後、色はfreeCodeCampのブランドアイデンティティ、開発者体験、およびアクセシビリティを尊重するために選ばれました。
 
-The `!important` keyword may be used to override values in some cases (e.g. accessibility concerns). You should add a comment describing the issue, so it doesn't get removed in future refactoring.
+!important キーワードは、一部のケース（例えばアクセシビリティの懸念事項）で値を上書きするために使用される場合があります。将来のリファクタリングで削除されないように、問題を説明するコメントを追加してください。
 
 RTLサポート
 当社は、この方向で読まれる言語のために、コードベースで右から左（RTL）レイアウトのサポートを目指しています。これを行うには、コンポーネントのスタイリング方法に注意する必要があります。以下は、守るべき簡単なルールのいくつかです：
